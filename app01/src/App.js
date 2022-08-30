@@ -3,15 +3,28 @@ import Header from './componentes/imgs/Header'
 import Corpo from './componentes/imgs/Corpo'
 //import Logo from './componentes/imgs/facu.jpg'
 //import react from './componentes/imgs/react.jpg'
+import Dados from './componentes/imgs/Dados'
 
 export default function App(){
-const canal='CFB Cursos'
+
+const yt=' youtube.com/cfbcursos'  
+const canal=' CFB Cursos'
+const crs=" React.js"
+
 return(
       <>
-      
-     <Header/>
-     <h1> CFB CURSOS </h1>
+    
+       <h1> Universidade Católica, abre curso de React. </h1>
+       <Header/>
+       <hr></hr>
+       <p>
+       <Dados canal={canal} youtube ={yt} curso={crs}/> 
+       </p>
       <Corpo/>
+      
+      
+     
+    
 
       </>
 )
