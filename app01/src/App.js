@@ -2,17 +2,19 @@ import React from 'react'
 import Header from './componentes/imgs/Header'
 import Corpo from './componentes/imgs/Corpo'
 import './Appp.css'
+import Relogio from './componentes/imgs/relogio'
 export default function App(){
 
 const testeDestaque={
 
       color:'#00f',
-      fontSize:'3em'
+      fontSize:'3em'image.png
 }
 
 return(
       <>
       <section className='caixa'>
+            <Relogio/>
       <h1  style={{color:'#f00', fontSize:'3em'}}>CFB Cursos</h1>
        <h1 style={testeDestaque}> Universidade Católica, abre curso de React. </h1>
        <Header/>
