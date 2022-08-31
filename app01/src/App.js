@@ -1,20 +1,28 @@
 import React from 'react'
 import Header from './componentes/imgs/Header'
 import Corpo from './componentes/imgs/Corpo'
-
+import './Appp.css'
 export default function App(){
 
+const testeDestaque={
 
+      color:'#00f',
+      fontSize:'3em'
+}
 
 return(
       <>
-    
-       <h1> Universidade Católica, abre curso de React. </h1>
+      <section className='caixa'>
+      <h1  style={{color:'#f00', fontSize:'3em'}}>CFB Cursos</h1>
+       <h1 style={testeDestaque}> Universidade Católica, abre curso de React. </h1>
        <Header/>
        <hr></hr>
-      <Corpo/>
-      
-
+       <Corpo/>
+       <p className='texto'>
+      Vamos Aprender Muito, Vem com a gt.
+      <a href='https://www.youtube.com/cfbcursos' target='blanck'> clique aqui</a>
+      </p>
+      </section>
       </>
 )
 }
