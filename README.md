@@ -18,10 +18,19 @@ Sou iniciante no mundo da programação e esse é um dos primeiros cursos de qua
 <li>Como criar componentes em React - Curso de React - Aula 05</li>
 <li>Enviar propriedades para os componentes com PROPS - Curso de React - Aula 06</li>
 <li>Enviar funções para os componentes - Curso de React - Aula 07</li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>Usando Css em React</li>
+<li>Renderização</li>
+<li>State</li>
+<li>Eventos em React</li>
+<li>Renderização Condicional</li>
+<li>Listas</li>
+<li>Formulários</li>
+<li>Objeto State</li>
+<li>Elevação State</li>
+<li>Desafio</li>
+<li>Contenção</li>
+<li>UseEffect</li>
+<li>LocalStorage</li>
  </ul>
 
 
