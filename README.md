@@ -18,19 +18,19 @@ Sou iniciante no mundo da programação e esse é um dos primeiros cursos de qua
 <li>Como criar componentes em React - Curso de React - Aula 05</li>
 <li>Enviar propriedades para os componentes com PROPS - Curso de React - Aula 06</li>
 <li>Enviar funções para os componentes - Curso de React - Aula 07</li>
-<li>Usando Css em React</li>
-<li>Renderização</li>
-<li>State</li>
-<li>Eventos em React</li>
-<li>Renderização Condicional</li>
-<li>Listas</li>
-<li>Formulários</li>
-<li>Objeto State</li>
-<li>Elevação State</li>
-<li>Desafio</li>
-<li>Contenção</li>
-<li>UseEffect</li>
-<li>LocalStorage</li>
+<li>Usando Css em React- Curso de React - Aula 08</li>
+<li>Renderização- Curso de React - Aula 09</li>
+<li>State- Curso de React - Aula 10</li>
+<li>Eventos em React- Curso de React - Aula 11</li>
+<li>Renderização Condicional- Curso de React - Aula 12</li>
+<li>Listas- Curso de React - Aula 13</li>
+<li>Formulários- Curso de React - Aula 14</li>
+<li>Objeto State- Curso de React - Aula 15</li>
+<li>Elevação State- Curso de React - Aula 16</li>
+<li>Desafio- Curso de React - Aula 17</li>
+<li>Contenção- Curso de React - Aula 18</li>
+<li>UseEffect- Curso de React - Aula 19</li>
+<li>LocalStorage- Curso de React - Aula 20</li>
  </ul>
 
 
