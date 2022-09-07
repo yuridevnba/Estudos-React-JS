@@ -6,13 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import Appp from './AppState'
 import Evento from './eventos'
 import Renderização from './renderizaçãoCondicional'
+import Lista from './Lista'
 //function tick(){
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     
     
-   <Renderização/>
+   <Lista/>
   </React.StrictMode>
   
 );
