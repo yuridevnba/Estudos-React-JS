@@ -9,14 +9,17 @@ export const Contador = ({ txt }) => {
     setContador((contador) => contador + 1);
   };
   const handleClickMenos = () => {
-    setContador(contador - 1);
+   if(contador>0){
+    setContador(contador-1)
+
+   }
   }
   return (
     <div>
-      <h1>
+      <h3>
    
         {txt} - {contador}
-      </h1>
+      </h3>
       
       <button onClick={handleClickMais}>+</button>
       <button onClick={handleClickMenos}>-</button>
