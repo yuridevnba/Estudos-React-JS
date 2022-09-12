@@ -9,7 +9,7 @@ import Renderização from './renderizaçãoCondicional'
 import Lista from './Lista'
 import Formulario from './formulario'
 import Objeto from './objetosState'
-import Desafio from './Desafio01Unicap'
+import Desafio from './Desafio02Unicap'
 //function tick(){
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
