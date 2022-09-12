@@ -6,7 +6,7 @@ export const Contador = ({ txt }) => {
 
 
   const handleClickMais = () => {
-    setContador((contador) => contador + 1);
+    setContador(contador + 1);
   };
   const handleClickMenos = () => {
    if(contador>0){

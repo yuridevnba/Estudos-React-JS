@@ -7,7 +7,7 @@ export default function App() {
 
 
 
-  const [item, setItem] = useState("");
+  const [item, setItem] = useState(" ");
   const [contadores, setContadores] = useState([]);
 
 
@@ -16,7 +16,7 @@ export default function App() {
 
   const handleClickBtInserir = () => {
     const contadoresFiltrados = contadores.filter( // filter, para filtrar elementos no array que atendem a um certo critério.
-      (contador) => contador.props.txt === item
+      (Contador) => Contador.props.txt === item
     );
     if (contadoresFiltrados.length === 0) {
       setContadores([...contadores, <Contador key={item} txt={item} />]);
