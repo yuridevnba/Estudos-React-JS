@@ -10,17 +10,19 @@ function getConsonants(str) {
   var m = str.match(/[bcçdfghjklmnpqrstvwxyz]/gi);
   return m === null ? 0 : m.length;
 }
-
+//Usestate
 export default function App() {
-  const [textos, setTextos] = useState([]);
+  const [textvetor, setTextvetor] = useState([]);
   const [texto, setTexto] = useState("");
+
+// manipulador do useState
   const handleChangeTexto = (evt) => {
     setTexto(evt.target.value);
   };
   const handleClickBtInserir = () => {
     let textoTrim = texto.trim();
     if (textoTrim) {
-      setTextos([...textos, textoTrim]);
+      setTextvetor([...textvetor, textoTrim]);
     }
   };
 
@@ -36,10 +38,23 @@ export default function App() {
         />{" "}
         <button onClick={handleClickBtInserir}>Inserir</button>
       </p>
-      <ol>
-        {textos.length > 0 &&
-          textos.map((umTexto, index) => <li key={index}>{umTexto}</li>)}
-      </ol>
-      </>
-  )
-        }
+      
+      {textvetor.length > 0 && (
+        <table>
+          <tr>
+            <th>Texto</th>
+            <th>Vogais</th>
+            <th>Consoantes</th>
+          </tr>
+          {textvetor.map((umTexto, index) => (
+            <tr key={index}>
+              <td>{umTexto}</td>
+              <td>{getVowels(umTexto)}</td>
+              <td>{getConsonants(umTexto)}</td>
+            </tr>
+          ))}
+        </table>
+      )}
+    </>
+  );
+}
