@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import "./App.css";
 
+
 function getVowels(str) {
   var m = str.match(/[aáàãâeéêiíoóõôuú]/gi);
   return m === null ? 0 : m.length;
 }
-
 function getConsonants(str) {
   var m = str.match(/[bcçdfghjklmnpqrstvwxyz]/gi);
   return m === null ? 0 : m.length;
 }
+
 //Usestate
 export default function App() {
+  
   const [textvetor, setTextvetor] = useState([]);
   const [texto, setTexto] = useState("");
 
@@ -22,6 +24,7 @@ export default function App() {
   const handleClickBtInserir = () => {
     let textoTrim = texto.trim();
     if (textoTrim) {
+      
       setTextvetor([...textvetor, textoTrim]);
     }
   };
@@ -37,8 +40,7 @@ export default function App() {
           onChange={handleChangeTexto}
         />{" "}
         <button onClick={handleClickBtInserir}>Inserir</button>
-      </p>
-      
+      </p> 
       {textvetor.length > 0 && (
         <table>
           <tr>

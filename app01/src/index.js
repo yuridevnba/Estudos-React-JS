@@ -9,13 +9,14 @@ import Renderização from './renderizaçãoCondicional'
 import Lista from './Lista'
 import Formulario from './formulario'
 import Objeto from './objetosState'
-import Desafio from './Desafio03Unicap'
+import Desafio from './Atividade01Unicap'
+import Desafio1 from './Desafio03Unicap'
 //function tick(){
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     
-    
+    <Desafio1/>
    <Desafio/>
   </React.StrictMode>
   
