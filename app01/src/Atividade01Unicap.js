@@ -8,16 +8,23 @@ export default function App() {
     const [textvetor, setTextvetor] = useState([]);
 
 
-    const [suposicao, setSuposicao] = useState(" ");
-    const [segredo,setSegredo]=useState(" ");
+    const [suposicao, setSuposicao] = useState("");
+    const [s,setS]=useState("");
+  //const [auxiliar,setAuxiliar]=useState("")
+
+    let segredo;
 
     const [mostrardiv, setMostrarDiv] = useState(false);
     const [esconderdiv, setEsconderDiv] = useState(true);
 
     const handleSegredo = (evt) => {
         if(evt.target.value.length<=3){
-        setSegredo(evt.target.value);
+           setS(evt.target.value)
+          // setSegredo(setAuxiliar)
+        segredo=setS;
+        setS("")
       }
+      
     }
 
   const handleSuposicao = (evt) => {
@@ -26,7 +33,7 @@ export default function App() {
   }
 }
   const handleClickBtInserir = () => {
-    setEsconderDiv(false)
+    //setEsconderDiv(false)
     let textoTrim = suposicao.trim();
     if (textoTrim) {
       setTextvetor2([...textvetor2, textoTrim]);
@@ -34,7 +41,7 @@ export default function App() {
 }
 
     const handleClickBtInserirsecreto = () => {
-      setMostrarDiv(true)
+      //setMostrarDiv(true)
         let secreTrim = segredo.trim();
         if (secreTrim) {
           setTextvetor([...textvetor, secreTrim]);
@@ -77,25 +84,25 @@ export default function App() {
  
     function comparação2(co1,co2,co3){
   
-  co1=suposicao.match(segredo[0])
-    if(co1!=null){
+  co1=suposicao[0].indexOf(segredo[1])
+    if(co1!=-1){
       cott++
     }
-    co2=suposicao.match(segredo[1])
+    co2=suposicao[0].indexOf(segredo[2])
     
-    if(co2!=null){
+    if(co2!=-1){
       cott++
     }
-    co3=suposicao.match(segredo[2])
+    co3=suposicao[1].indexOf(segredo[2])
     
-    if(co3!=null){
+    if(co3!=-1){
       cott++
     }
     return "Vaca ("+cott+")"
   }
 
-
-
+  
+  
   return (
     <>
      
@@ -146,7 +153,7 @@ export default function App() {
               <td>{comparação(umTexto)}</td>
               <td>{comparação2(umTexto)}</td>
            {/*"teste"+textvetor[0]*/}
-          {/*suposicao[0]*/}
+         console.console.log( {segredo[0]});
           
             </tr>
           ))}

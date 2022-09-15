@@ -5,17 +5,12 @@ import { Contador } from "./Contador";
 
 export default function App() {
 
-
-
   const [item, setItem] = useState(" ");
   const [contadores, setContadores] = useState([]);
 
 
-
-
-
   const handleClickBtInserir = () => {
-    const contadoresFiltrados = contadores.filter( // filter, para filtrar elementos no array que atendem a um certo critério.
+     const contadoresFiltrados = contadores.filter( // filter, para filtrar elementos no array que atendem a um certo critério.
       (Contador) => Contador.props.txt === item
     );
     if (contadoresFiltrados.length === 0) {
