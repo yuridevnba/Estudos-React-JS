@@ -1,28 +1,31 @@
 import React, { useState } from "react";
 import "./App.css";
+import NumberList from "./tentativas";
 
 //UseState
 
 export default function App() {
+
+  
   const [textvetor2, setTextvetor2] = useState([]);
     const [textvetor, setTextvetor] = useState([]);
 
 
     const [suposicao, setSuposicao] = useState("");
-    const [s,setS]=useState("");
+    const [segredo,setSegredo]=useState("");
   //const [auxiliar,setAuxiliar]=useState("")
 
-    let segredo;
+    //let auxiliar;
 
-    const [mostrardiv, setMostrarDiv] = useState(false);
+   const [mostrardiv, setMostrarDiv] = useState(false); 
     const [esconderdiv, setEsconderDiv] = useState(true);
 
     const handleSegredo = (evt) => {
         if(evt.target.value.length<=3){
-           setS(evt.target.value)
+           setSegredo(evt.target.value)
           // setSegredo(setAuxiliar)
-        segredo=setS;
-        setS("")
+       // segredo=setS;
+        //setS("")
       }
       
     }
@@ -32,16 +35,18 @@ export default function App() {
     setSuposicao(evt.target.value);
   }
 }
-  const handleClickBtInserir = () => {
-    //setEsconderDiv(false)
+  const hancleClickBtSuposicao = () => {
+    setEsconderDiv(false)
+    setMostrarDiv(true)
     let textoTrim = suposicao.trim();
     if (textoTrim) {
       setTextvetor2([...textvetor2, textoTrim]);
     }
 }
 
-    const handleClickBtInserirsecreto = () => {
-      //setMostrarDiv(true)
+    const handleClickBtSecreto = () => {
+      setEsconderDiv(false)
+      setMostrarDiv(true)
         let secreTrim = segredo.trim();
         if (secreTrim) {
           setTextvetor([...textvetor, secreTrim]);
@@ -50,28 +55,29 @@ export default function App() {
         }
   };
     
-     
-  
-  
-  
-
+    
   let cott=0;
  let cont=0;
-  function comparação(comp1,comp2,comp3){
 
+  function comparação(comp1,comp2,comp3){
+    if(suposicao[0]!=undefined && segredo[0]!=undefined){
     comp1= segredo[0].indexOf(suposicao[0])
     if(comp1!=-1){
       cont++
     }
-    
+  }
+  if(suposicao[1]!=undefined && segredo[1]!=undefined){
     comp2= segredo[1].indexOf(suposicao[1])
     if(comp2!=-1){
       cont++
     }
+  }
+  if(suposicao[2]!=undefined && segredo[2]!=undefined){
     comp3= segredo[2].indexOf(suposicao[2])
     if(comp3!=-1){
       cont++
     }
+  }
    return "Touro ("+cont+")"
   }
 
@@ -83,25 +89,31 @@ export default function App() {
 
  
     function comparação2(co1,co2,co3){
-  
+  if(suposicao[0]!=undefined && segredo[1]!=undefined){
   co1=suposicao[0].indexOf(segredo[1])
     if(co1!=-1){
       cott++
     }
+  }
+  if(suposicao[0]!=undefined && segredo[2]!=undefined){
     co2=suposicao[0].indexOf(segredo[2])
     
     if(co2!=-1){
       cott++
     }
+  }
+  if(suposicao[1]!=undefined && segredo[2]!=undefined){
     co3=suposicao[1].indexOf(segredo[2])
     
     if(co3!=-1){
       cott++
     }
-    return "Vaca ("+cott+")"
   }
-
   
+    return "Vaca ("+cott+")"
+  
+
+}
   
   return (
     <>
@@ -115,7 +127,7 @@ export default function App() {
     
        <hr></hr>
       <p>
-      
+      {esconderdiv && (<div className="App1">
       <input
       placeholder="TEXTO SECRETO"
           id="secreto"
@@ -124,8 +136,10 @@ export default function App() {
          onChange={handleSegredo} 
         />
         
-        <button onClick={handleClickBtInserirsecreto} > Inserir</button ><br></br>
-      <p id="demo"></p>
+        <button onClick={handleClickBtSecreto}>Inserir</button ><br></br>
+        </div>)
+      }
+       {mostrardiv && (<div className="App2">
         <input
          placeholder="TEXTO SUPOSIÇÃO"
           id="suposicao"
@@ -134,8 +148,11 @@ export default function App() {
           onChange={handleSuposicao}
           
         />{" "}
-        <button  onClick={handleClickBtInserir}>Inserir</button>
-       
+        <button  onClick={hancleClickBtSuposicao}>Inserir</button>
+        </div>)
+      }
+    
+
       </p>
      
       {textvetor.length > 0 && (
@@ -148,19 +165,19 @@ export default function App() {
           {textvetor.map((umTexto, index) => (
             <tr key={index}>
               
-              <td>{/*Buscador(umTexto)*/}</td>
-
               <td>{comparação(umTexto)}</td>
               <td>{comparação2(umTexto)}</td>
-           {/*"teste"+textvetor[0]*/}
-         console.console.log( {segredo[0]});
-          
+
+              <NumberList textos={textvetor2} texto={suposicao}/>
+
             </tr>
           ))}
         </table>
     
       )}
+      
     </>
+    
   );
 
 }
