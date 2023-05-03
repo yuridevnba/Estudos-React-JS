@@ -1,10 +1,10 @@
-# Curso-REACT
+# REACT-JS
 
 <h1 align="center"> Curso REACT </h1>
 <header>
 Olá, sou Yuri Henrique.
 
-Sou iniciante no mundo da programação e esse é um dos primeiros cursos de qualificação que estou realizando na biblioteca  REACT. 🌟🚀
+Sou iniciante no mundo da programação e esse é um dos primeiros repositórios que subo utilizando a  na biblioteca  REACT-JS. 🌟🚀
 
  
 
@@ -35,6 +35,6 @@ Sou iniciante no mundo da programação e esse é um dos primeiros cursos de qua
 
 
 METODOLOGIA
-<p align ="justify">Além de cobrir a teoria de forma clara e objetiva, o curso possui muito enfoque prático. Cada seção do curso possui exercícios resolvidos e exercícios propostos para  treinar. E alguns  projetos  reais. </p>
+<p align ="justify">Além de cobrir a teoria de forma clara e objetiva, foquei no  prático. Cada seção  fiz  exercícios  e procurei na net exercícios para  treinar. E alguns  projetos  reais. </p>
 
 > :construction: Projeto em construção :construction:
